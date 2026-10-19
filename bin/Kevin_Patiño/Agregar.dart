@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../main.dart';
+import '../../lib/contac.dart';
 
 void Agregar(List<Contacto> agenda) {
   stdout.write("Ingrese el nombre ");

@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../main.dart';
+import '../../lib/contac.dart';
 
 void Eliminar(List<Contacto> agenda) {
   int ListE = agenda.length;

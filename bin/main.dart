@@ -2,12 +2,7 @@ import 'dart:io';
 import '../bin/Kevin_Patiño/Agregar.dart';
 import '../bin/Kevin_Patiño/Eliminar.dart';
 import 'yilmalopez/listar.dart';
-
-class Contacto{
-  String nombre;
-  String telefono; 
-  Contacto(this.nombre,this.telefono);
-}
+import '../lib/contac.dart';
 
 void main(){
   List<Contacto> agenda =[];
