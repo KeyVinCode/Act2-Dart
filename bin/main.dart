@@ -1,4 +1,6 @@
 import 'dart:io';
+import '../bin/Kevin_Patiño/Agregar.dart';
+import '../bin/Kevin_Patiño/Eliminar.dart';
 
 class Contacto{
   String nombre;
@@ -22,12 +24,14 @@ void main(){
     String? opcion = stdin.readLineSync();
     switch (opcion){
       case '1':
+          Agregar(agenda);
         break;
       case '2':
         break;
       case '3':
        break;
       case'4' : 
+        Eliminar(agenda);
         break;
       case '5':
         print('Saliendo del la agenda');

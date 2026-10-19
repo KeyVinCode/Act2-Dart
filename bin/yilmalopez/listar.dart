@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import '../../lib/main.dart';
+import '../main.dart';
 
 void listarContactos(List<Contacto> agenda) {
-  print('\n--- Lista de Contactos ---');
+  stdout.write('\n--- Lista de Contactos ---');
   if (agenda.isEmpty) {
     print('No hay contactos en la agenda');
   } else {
