@@ -1,4 +1,7 @@
 import 'dart:io';
+import '../bin/Kevin_Patiño/Agregar.dart';
+import '../bin/Kevin_Patiño/Eliminar.dart';
+import 'yilmalopez/listar.dart';
 
 class Contacto{
   String nombre;
@@ -15,19 +18,23 @@ void main(){
     print('1. Agregar Contacto');
     print('2. Ver contacto');
     print('3. Buscar conteacto');
-    print('4.Eliminiar Contacto');
+    print('4. Eliminiar Contacto');
     print('5. Salir');
     stdout.write('Elige una opcion: '); 
 
     String? opcion = stdin.readLineSync();
     switch (opcion){
       case '1':
+          Agregar(agenda);
         break;
       case '2':
+          listarContactos(agenda);
         break;
       case '3':
+          buscarContacto(agenda);
        break;
       case'4' : 
+        Eliminar(agenda);
         break;
       case '5':
         print('Saliendo del la agenda');
