@@ -1,11 +1,11 @@
 import 'dart:io';
+import '../main.dart'; 
 
-import '../main.dart';
-
+// 1. Listar contactos (Esta ya estaba bien)
 void listarContactos(List<Contacto> agenda) {
-  stdout.write('\n--- Lista de Contactos ---');
+  print('\n--- Lista de Contactos ---');
   if (agenda.isEmpty) {
-    print('No hay contactos en la agenda');
+    print('No hay contactos en la agenda.');
   } else {
     for (var contacto in agenda) {
       print('Nombre: ${contacto.nombre}, Teléfono: ${contacto.telefono}');
@@ -13,18 +13,25 @@ void listarContactos(List<Contacto> agenda) {
   }
 }
 
+// 2. Buscar contacto (Modificada para que pida el nombre ella misma)
+void buscarContacto(List<Contacto> agenda) {
+  stdout.write('Escribe el nombre del contacto que deseas buscar: ');
+  String? nombre = stdin.readLineSync();
 
-void buscarContacto(List<Contacto> agenda, String nombre) {
+  // Validamos que el usuario haya escrito algo
+  if (nombre == null || nombre.trim().isEmpty) {
+    print('No ingresaste un nombre válido.');
+    return;
+  }
 
+  // Lógica de búsqueda
   var contactoEncontrado = agenda.cast<Contacto?>().firstWhere(
     (contacto) => contacto?.nombre.toLowerCase() == nombre.toLowerCase(),
     orElse: () => null,
   );
 
   if (contactoEncontrado != null) {
-    print(
-      'Contacto encontrado: Nombre: ${contactoEncontrado.nombre}, Teléfono: ${contactoEncontrado.telefono}',
-    );
+    print('Nombre: ${contactoEncontrado.nombre}, Teléfono: ${contactoEncontrado.telefono}');
   } else {
     print('El contacto "$nombre" no se encuentra en la agenda.');
   }

@@ -19,7 +19,7 @@ void Eliminar(List<Contacto> agenda) {
 
   if (Box != null && Box > 0 && Box <= ListE){
     Contacto contactoElim = agenda.removeAt(Box-1);
-    print('Contacto eliminado con ${contactoElim}');
+    print('Contacto eliminado con ${contactoElim.nombre}');
   }else{
     print('numero no valido');
   }
