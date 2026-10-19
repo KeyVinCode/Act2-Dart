@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'Kevin_Patiño/Agregar.dart';
-import 'Kevin_Patiño/Eliminar.dart';
+import '../bin/Kevin_Patiño/Agregar.dart';
+import '../bin/Kevin_Patiño/Eliminar.dart';
 
 class Contacto{
   String nombre;
