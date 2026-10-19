@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../main.dart'; 
+import '../../lib/contac.dart';
 
 // 1. Listar contactos (Esta ya estaba bien)
 void listarContactos(List<Contacto> agenda) {
